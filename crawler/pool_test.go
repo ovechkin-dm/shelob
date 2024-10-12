@@ -44,11 +44,11 @@ func TestHappyPath(t *testing.T) {
 		ThenReturn(false).
 		Verify(Times(2))
 
-	When(repo.Save("./downloads/example.com/index.html", link)).
+	WhenSingle(repo.Save("./downloads/example.com/index.html", link)).
 		ThenReturn(nil).
 		Verify(Once())
 
-	When(repo.Save("./downloads/example.com/page1/index.html", link)).
+	WhenSingle(repo.Save("./downloads/example.com/page1/index.html", link)).
 		ThenReturn(nil).
 		Verify(Once())
 
