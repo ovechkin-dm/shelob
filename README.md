@@ -24,3 +24,12 @@ Usage of ./shelob:
       --resume                Resume previous download
       --workers int           Number of workers to use (default 1)
 ```
+
+### Roadmap
+- [x] Basic web crawler
+- [x] Parallel download
+- [x] Resume download
+- [ ] Better url sanitization
+- [ ] Better handling of download directories (e.g. create directory only if subdirectories shoould be created)
+- [ ] Improved logging
+- [ ] Retries / circuit breaker
