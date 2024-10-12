@@ -161,7 +161,7 @@ func (w *WorkerPool) toPath(url *urllib.URL) string {
 
 func (w *WorkerPool) normalizeURL(rawURL string) (*urllib.URL, bool) {
 	if len(rawURL) > 1 && rawURL[0:2] == "//" {
-		rawURL = w.cfg.BaseURL.Scheme + ":" + rawURL
+		return nil, false
 	}
 	if len(rawURL) > 0 && rawURL[0:1] == "/" {
 		rawURL = w.cfg.BaseURL.String() + rawURL
